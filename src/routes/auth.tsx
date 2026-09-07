@@ -1,7 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -65,16 +64,6 @@ function AuthPage() {
     }
   };
 
-  const handleGoogle = async () => {
-    try {
-      await lovable.auth.signInWithOAuth("google", {
-        redirect_uri: window.location.origin,
-      });
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Nepavyko prisijungti su Google");
-    }
-  };
-
   return (
     <main className="flex min-h-screen items-center justify-center bg-background px-4">
       <Card className="w-full max-w-md">
@@ -108,9 +97,6 @@ function AuthPage() {
               {mode === "signin" ? "Prisijungti" : "Registruotis"}
             </Button>
           </form>
-          <Button type="button" variant="outline" className="w-full" onClick={handleGoogle}>
-            Tęsti su Google
-          </Button>
           <button
             type="button"
             className="w-full text-sm text-muted-foreground underline"
