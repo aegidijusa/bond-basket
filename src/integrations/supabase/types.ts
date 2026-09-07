@@ -14,7 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      protokolai: {
+        Row: {
+          byla_baigta: boolean
+          bylos_baigimo_data: string | null
+          created_at: string
+          created_by: string | null
+          data: string | null
+          gavimo_data: string | null
+          id: string
+          ikiteism_nr: string | null
+          ikiteisminis_prad: string | null
+          padalinys: string | null
+          pareigunas: string | null
+          pastabos: string | null
+          pazymejimas: string | null
+          postas: string | null
+          psp: string | null
+          siuntos_nr: string | null
+          tipas: string | null
+          tyrejas: string | null
+          updated_at: string
+        }
+        Insert: {
+          byla_baigta?: boolean
+          bylos_baigimo_data?: string | null
+          created_at?: string
+          created_by?: string | null
+          data?: string | null
+          gavimo_data?: string | null
+          id?: string
+          ikiteism_nr?: string | null
+          ikiteisminis_prad?: string | null
+          padalinys?: string | null
+          pareigunas?: string | null
+          pastabos?: string | null
+          pazymejimas?: string | null
+          postas?: string | null
+          psp?: string | null
+          siuntos_nr?: string | null
+          tipas?: string | null
+          tyrejas?: string | null
+          updated_at?: string
+        }
+        Update: {
+          byla_baigta?: boolean
+          bylos_baigimo_data?: string | null
+          created_at?: string
+          created_by?: string | null
+          data?: string | null
+          gavimo_data?: string | null
+          id?: string
+          ikiteism_nr?: string | null
+          ikiteisminis_prad?: string | null
+          padalinys?: string | null
+          pareigunas?: string | null
+          pastabos?: string | null
+          pazymejimas?: string | null
+          postas?: string | null
+          psp?: string | null
+          siuntos_nr?: string | null
+          tipas?: string | null
+          tyrejas?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
